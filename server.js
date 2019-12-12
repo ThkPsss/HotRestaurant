@@ -17,6 +17,10 @@ app.use(express.json());
 //     res.sendFile(path.join(__dirname, "tables.html"));
 // });
 
+<<<<<<< HEAD
+app.get("/reservation", function (req, res) {
+    res.sendFile(path.join(__dirname, "reservation.html"));
+=======
 // app.get("/reservation", function (req, res) {
 //     res.sendFile(path.join(__dirname, "reservation.html"));
 // });
@@ -24,6 +28,7 @@ app.use(express.json());
 app.get("/:page?", (req, res) => {
     const {page} = req.params;
     res.sendfile(path.join(__dirname, `${page || 'index'}.html`));
+>>>>>>> 0108bbfc7f2254bb8ca217256decba0fb5033a72
 });
 
 app.route("/api/reservations/").post((req, res) => {
