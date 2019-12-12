@@ -21,13 +21,14 @@ app.use(express.json());
 //     res.sendFile(path.join(__dirname, "reservation.html"));
 // });
 
-app.get("/:page", (req, res) => {
+app.get("/:page?", (req, res) => {
     const {page} = req.params;
     res.sendfile(path.join(__dirname, `${page || 'index'}.html`));
 });
 
 app.route("/api/reservations/").post((req, res) => {
     reservations.push(req.body.reservation);
+    res.json(req.body.reservation);
 }).get((req, res) => {
     res.json(reservations);
 });
@@ -36,4 +37,4 @@ app.route("/api/reservations/").post((req, res) => {
 
 app.listen(PORT, function() {
     console.log("Listening on PORT: " + PORT);
-});
+}); 
