@@ -17,5 +17,8 @@
     "url": "https://github.com/ThkPsss/HotRestaurant/issues"
   },
   "homepage": "https://github.com/ThkPsss/HotRestaurant#readme",
-  "description": ""
-}
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+
